@@ -1,0 +1,47 @@
+﻿@model Lab06MVCWeb.Models.Department
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <<h2 class="text-2xl mt-9">Departments</h2>
+    <hr />
+    <dl class="dl-horizontal mt-9 bg-gray-400/40 p-9 rounded-xl">
+        <dt>
+            @Html.DisplayNameFor(model => model.DName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MgrStartdate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MgrStartdate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.FName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.FName)
+        </dd>
+
+    </dl>
+</div>
+
+<div class="w-full flex gap-4">
+    <div class="w-fit bg-green-500/80 rounded-full mt-9 px-7 py-3 text-lg text-white hover:bg-green-600 transition-all">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.DNumber })
+    </div>
+    <div class="w-fit bg-gray-500/80 rounded-full mt-9 px-7 py-3 text-lg text-white hover:bg-gray-600 transition-all">
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+</div>

@@ -1,0 +1,19 @@
+﻿
+@{
+    ViewBag.Title = "HRM";
+}
+
+<h2 class="text-2xl mt-9">HRM</h2>
+
+<div class="w-full h-full flex gap-3 mt-9 bg-sky-500/40 p-6 rounded-lg">
+    <div class="w-fit bg-green-500/80 rounded-full px-7 py-3 text-lg text-white hover:bg-green-600 transition-all">
+        @Html.ActionLink("Department", "Index", "Departments")
+    </div>
+    <div class="w-fit bg-green-500/80 rounded-full px-7 py-3 text-lg text-white hover:bg-green-600 transition-all">
+        @Html.ActionLink("Dependent", "Index", "Dependents")
+    </div>
+    <div class="w-fit bg-green-500/80 rounded-full px-7 py-3 text-lg text-white hover:bg-green-600 transition-all">
+        @Html.ActionLink("Employee", "Index", "Employees")
+    </div>
+</div>
+

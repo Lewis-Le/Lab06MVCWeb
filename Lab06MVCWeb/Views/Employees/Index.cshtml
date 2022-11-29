@@ -1,0 +1,87 @@
+﻿@model IEnumerable<Lab06MVCWeb.Models.Employee>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 class="text-2xl mt-9">Employees</h2>
+
+<p class="w-fit bg-green-500/80 rounded-full mt-9 px-7 py-3 text-lg text-white hover:bg-green-600 transition-all">
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table mt-9 bg-gray-400/40 p-9 rounded-xl">
+    <tr class="px-4">
+        <th>
+            @Html.DisplayNameFor(model => model.FName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MInit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Address)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sex)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Department.DName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee2.FName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr class="px-4">
+        <td>
+            @Html.DisplayFor(modelItem => item.FName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MInit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sex)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Salary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Department.DName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Employee2.FName)
+        </td>
+        <td class="flex gap-2">
+            <div class="w-fit bg-green-500/80 rounded-full mt-9 px-7 py-3 text-lg text-white hover:bg-green-600 transition-all">
+                @Html.ActionLink("Edit", "Edit", new { id = item.SSN })
+            </div>
+            <div class="w-fit bg-sky-500/80 rounded-full mt-9 px-7 py-3 text-lg text-white hover:bg-sky-600 transition-all">
+                @Html.ActionLink("Details", "Details", new { id = item.SSN })
+            </div>
+            <div class="w-fit bg-red-500/80 rounded-full mt-9 px-7 py-3 text-lg text-white hover:bg-red-600 transition-all">
+                @Html.ActionLink("Delete", "Delete", new { id = item.SSN })
+            </div>
+        </td>
+    </tr>
+}
+
+</table>

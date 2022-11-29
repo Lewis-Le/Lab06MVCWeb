@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="989ab69e4fb442a692a9851bd0411db6" Name="Diagram1">
+        <EntityTypeShape EntityType="Lab06MVCwebModel.Department" Width="1.5" PointX="0.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lab06MVCwebModel.Dependent" Width="1.5" PointX="5.25" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Lab06MVCwebModel.Employee" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="Lab06MVCwebModel.FK__Departmen__Mgrss__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="Lab06MVCwebModel.FK_Employee_Dno_Department_Dnumber" ManuallyRouted="false" />
+        <AssociationConnector Association="Lab06MVCwebModel.FK__Dependent__ESSN__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="Lab06MVCwebModel.FK__Employee__SuperS__3D5E1FD2" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
